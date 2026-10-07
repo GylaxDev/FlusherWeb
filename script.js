@@ -1,4 +1,3 @@
-// Tailwind config (must load right after the Tailwind CDN script)
 tailwind.config = {
   theme: { extend: { fontFamily: { sans: ['"Plus Jakarta Sans"', 'system-ui', 'Segoe UI', 'sans-serif'] } } }
 };
