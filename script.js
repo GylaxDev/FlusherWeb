@@ -6,7 +6,7 @@ document.documentElement.classList.add('js');
 
 const TOOLS = [
   ['cleaner', 'Cleaner', 'Clear temporary files, caches and leftovers from apps and Windows.'],
-  ['files', 'Files Analyzer', 'See which folders and files use the most space, with thumbnails.'],
+  ['files', 'Files Analyzer', 'See which folders and files use the most space, and remove them.'],
   ['registry', 'Registry Fixer', 'Remove invalid entries left behind by uninstalled software.'],
   ['shortcuts', 'Shortcuts Fixer', 'Find shortcuts that point to missing files and delete them.'],
   ['Uninstall', 'Uninstall Manager', 'Remove programs you no longer use from one list.'],
