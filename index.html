@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Flusher</title>
+<title>Flusher – A system cleaning app for Windows</title>
 <meta name="description" content="Flusher clears junk files, fixes the registry and shortcuts, and manages startup items. Built on WinUI 3. Free and open source.">
 <link rel="icon" href="assets/app.ico">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -58,7 +58,7 @@
     </div>
   </section>
 
-  <!-- Statement -->
+  <!-- Statement: words light up as you scroll -->
   <section class="relative h-[220vh]" data-words-stage>
     <div class="sticky top-0 grid h-screen place-items-center px-6">
       <p data-words class="max-w-4xl text-[clamp(1.9rem,5.2vw,4.2rem)] font-bold leading-[1.1] tracking-tight">Every PC fills up with things nobody asked for. Temporary files. Dead shortcuts. Leftovers from apps you removed long ago. Flusher finds all of it, shows you what it found, and clears it in seconds.</p>
@@ -124,13 +124,19 @@
 
   <!-- CTA -->
   <section id="download" class="px-5 py-24">
-    <div class="reveal mx-auto max-w-5xl overflow-hidden rounded-[36px] border border-white/10 px-6 py-24 text-center" style="background:linear-gradient(180deg,rgba(0,0,0,.1),rgba(0,0,0,.7)),url('assets/hero-background.jpg') center/cover">
-      <img src="assets/app-logo.png" alt="" class="mx-auto h-20 w-20 rounded-full shadow-[0_10px_40px_rgba(0,0,0,.5)]">
-      <h2 class="mt-8 text-5xl font-extrabold tracking-tight sm:text-7xl">Give your PC room to breathe.</h2>
-      <p class="mt-5 text-lg text-white/75">Free for Windows. No account needed.</p>
-      <div class="mt-9 flex flex-wrap items-center justify-center gap-4 text-sm font-semibold">
-        <a href="https://github.com/GylaxDev/Flusher" target="_blank" rel="noopener" class="rounded-full bg-white px-7 py-3.5 text-black hover:bg-white/85">Download for Windows</a>
-        <a href="https://github.com/GylaxDev/Flusher" target="_blank" rel="noopener" class="rounded-full bg-black/40 px-7 py-3.5 backdrop-blur hover:bg-black/60">View on GitHub</a>
+    <div class="reveal relative mx-auto max-w-5xl overflow-hidden rounded-[36px] border border-white/10 bg-[#0a0a0c] px-6 py-20 text-center sm:py-24">
+      <div class="cta-glow absolute inset-0" aria-hidden="true"></div>
+      <div class="relative">
+        <img src="assets/app-logo.png" alt="" class="mx-auto h-24 w-24 rounded-full shadow-[0_20px_60px_rgba(60,110,255,.55)]">
+        <h2 class="mx-auto mt-9 max-w-2xl text-5xl font-extrabold leading-[1.05] tracking-[-0.04em] sm:text-6xl" style="text-wrap:balance">Give your PC room to breathe.</h2>
+        <p class="mt-5 text-lg text-white/60">Free for Windows. No account needed.</p>
+        <div class="mt-9 flex flex-wrap items-center justify-center gap-4">
+          <a href="https://github.com/GylaxDev/Flusher" target="_blank" rel="noopener" class="btn-primary inline-flex items-center gap-3 rounded-full bg-white py-3.5 pl-6 pr-7 text-[15px] font-semibold text-black">
+            <svg viewBox="0 0 24 24" class="h-[18px] w-[18px] fill-current" aria-hidden="true"><path d="M3 3h8.4v8.4H3zM12.6 3H21v8.4h-8.4zM3 12.6h8.4V21H3zM12.6 12.6H21V21h-8.4z"/></svg>
+            Download for Windows
+          </a>
+          <a href="https://github.com/GylaxDev/Flusher" target="_blank" rel="noopener" class="rounded-full border border-white/20 px-7 py-3.5 text-[15px] font-semibold hover:bg-white/10">View on GitHub</a>
+        </div>
       </div>
     </div>
   </section>
