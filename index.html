@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Flusher – A system cleaning app for Windows</title>
+<meta name="description" content="Flusher clears junk files, fixes the registry and shortcuts, and manages startup items. Built on WinUI 3. Free and open source.">
+<link rel="icon" href="assets/app.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="script.js"></script>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="font-sans antialiased">
+
+<header class="fixed inset-x-0 top-0 z-30 border-b border-white/10 bg-black/60 backdrop-blur-xl" style="padding-top:env(safe-area-inset-top,0px)">
+  <div class="mx-auto flex h-12 max-w-5xl items-center justify-between px-5 text-xs">
+    <a href="#top" class="flex items-center gap-2 text-sm font-semibold"><img src="assets/app-logo.png" alt="" class="h-6 w-6 rounded-full">Flusher</a>
+    <nav class="hidden gap-8 text-white/70 sm:flex">
+      <a class="hover:text-white" href="#tools">Tools</a>
+      <a class="hover:text-white" href="#scan">Quick Scan</a>
+      <a class="hover:text-white" href="#health">Health</a>
+      <a class="hover:text-white" href="#control">Open source</a>
+    </nav>
+    <a href="#download" class="rounded-full bg-white px-3.5 py-1.5 font-semibold text-black hover:bg-white/85">Download</a>
+  </div>
+</header>
+
+<main id="top">
+  <!-- Hero: the screenshot rises and grows as you scroll -->
+  <section class="relative h-[240vh]" data-stage>
+    <div class="sticky top-0 h-screen overflow-hidden">
+      <div class="hero-bg absolute inset-x-0 top-0 h-[88vh]" aria-hidden="true"></div>
+      <div class="stage-light absolute inset-0" aria-hidden="true"></div>
+      <div class="stage-text relative px-5 pt-24 text-center sm:pt-28">
+        <div class="mx-auto flex w-fit items-center gap-3">
+          <img src="assets/app-logo.png" alt="" class="h-11 w-11 rounded-full shadow-[0_8px_30px_rgba(60,110,255,.5)]">
+          <span class="text-2xl font-semibold tracking-tight">Flusher</span>
+        </div>
+        <h1 class="mx-auto mt-5 text-[clamp(2.4rem,6.4vw,5.6rem)] font-bold leading-[1.02] tracking-[-0.045em]">A cleaner PC in one scan.</h1>
+        <p class="mx-auto mt-5 max-w-lg text-lg text-white/80 sm:text-xl">Clear junk, fix the registry and tame startup. Free for Windows.</p>
+        <div class="mt-8 flex flex-wrap items-center justify-center gap-x-8 gap-y-4">
+          <a href="#download" class="btn-primary group inline-flex items-center gap-3 rounded-full bg-white py-3.5 pl-6 pr-7 text-[15px] font-semibold text-black">
+            <svg viewBox="0 0 24 24" class="h-[18px] w-[18px] fill-current" aria-hidden="true"><path d="M3 3h8.4v8.4H3zM12.6 3H21v8.4h-8.4zM3 12.6h8.4V21H3zM12.6 12.6H21V21h-8.4z"/></svg>
+            Download for Windows
+          </a>
+          <a href="#tools" class="text-[15px] font-medium text-white/90 hover:text-white">Explore tools <span aria-hidden="true">›</span></a>
+        </div>
+      </div>
+      <div class="absolute inset-x-0 top-[max(54vh,28rem)] flex justify-center px-3 [perspective:1800px]">
+        <div class="shot-glow" aria-hidden="true"></div>
+        <div class="stage-shot w-[min(94vw,1120px,calc((100vh_-_6.5rem)*1.737))]">
+          <img src="assets/mockup.png" width="2000" height="1151" alt="Flusher home screen with Quick Scan, disk usage and battery status" class="block w-full" style="filter:drop-shadow(0 0 .5px rgba(255,255,255,.3)) drop-shadow(0 50px 90px rgba(0,0,0,.85))">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Statement: words light up as you scroll -->
+  <section class="relative h-[220vh]" data-words-stage>
+    <div class="sticky top-0 grid h-screen place-items-center px-6">
+      <p data-words class="max-w-4xl text-[clamp(1.9rem,5.2vw,4.2rem)] font-bold leading-[1.1] tracking-tight">Every PC fills up with things nobody asked for. Temporary files. Dead shortcuts. Leftovers from apps you removed long ago. Flusher finds all of it, shows you what it found, and clears it in seconds.</p>
+    </div>
+  </section>
+
+  <!-- Tools carousel -->
+  <section id="tools" class="py-24">
+    <div class="mx-auto flex max-w-5xl items-end justify-between px-5">
+      <h2 class="reveal text-4xl font-bold tracking-tight sm:text-6xl">Eight tools.<br><span class="text-white/45">One sidebar.</span></h2>
+      <div class="hidden gap-2 sm:flex">
+        <button data-prev aria-label="Previous" class="h-11 w-11 rounded-full bg-white/10 hover:bg-white/20">‹</button>
+        <button data-next aria-label="Next" class="h-11 w-11 rounded-full bg-white/10 hover:bg-white/20">›</button>
+      </div>
+    </div>
+    <div data-cards class="noscroll mt-8 flex snap-x snap-mandatory gap-5 overflow-x-auto px-5 pb-8 pt-4 lg:px-[max(1.25rem,calc((100vw-64rem)/2))]"></div>
+  </section>
+
+  <!-- Quick scan -->
+  <section id="scan" class="px-5 py-32 text-center">
+    <div class="reveal mx-auto max-w-3xl">
+      <div class="relative mx-auto w-fit"><div class="absolute left-1/2 top-1/2 h-64 w-64 -translate-x-1/2 -translate-y-1/2 rounded-full bg-sky-500/30 blur-3xl" aria-hidden="true"></div><img data-float data-speed=".06" src="assets/Icons/home.png" alt="" class="relative block h-44 w-44 object-contain sm:h-56 sm:w-56"></div>
+      <h2 class="mt-8 text-5xl font-extrabold tracking-tight sm:text-7xl">One scan.<br>Everything checked.</h2>
+      <p class="mx-auto mt-6 max-w-xl text-lg text-white/65">Quick Scan looks through the places Windows clutter hides. Pick what to include, then press Scan for Issues.</p>
+      <div class="mt-9 flex flex-wrap justify-center gap-2.5 text-sm">
+        <span class="rounded-full bg-white/10 px-4 py-2">Junk files</span><span class="rounded-full bg-white/10 px-4 py-2">Registry</span><span class="rounded-full bg-white/10 px-4 py-2">Shortcuts</span><span class="rounded-full bg-white/10 px-4 py-2">Privacy traces</span><span class="rounded-full bg-white/10 px-4 py-2">Startup items</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Health -->
+  <section id="health" class="bg-[#0b0b0d] px-5 py-32">
+    <div class="mx-auto max-w-5xl">
+      <h2 class="reveal max-w-2xl text-5xl font-extrabold tracking-tight sm:text-7xl">Know before it's full.</h2>
+      <p class="reveal mt-5 max-w-xl text-lg text-white/65">Your drive and battery, right on the Home screen.</p>
+      <div class="mt-14 grid gap-5 md:grid-cols-2">
+        <div class="reveal overflow-hidden card rounded-[32px] p-9">
+          <img data-float data-speed=".04" src="assets/Icons/files.png" alt="" class="h-20 w-20 object-contain">
+          <p class="mt-8 text-sm text-white/55">System Drive (C:)</p>
+          <p class="text-7xl font-extrabold tracking-tight sm:text-8xl"><span data-count="88">88</span>%</p>
+          <div class="mt-5 h-2 rounded-full bg-white/10"><div class="h-2 w-[88%] rounded-full bg-gradient-to-r from-orange-400 to-rose-500"></div></div>
+          <p class="mt-4 text-white/65">27,71 GB free of 237,62 GB</p>
+        </div>
+        <div class="reveal overflow-hidden card rounded-[32px] p-9">
+          <img data-float data-speed=".04" src="assets/Icons/Battery.png" alt="" class="h-20 w-20 object-contain">
+          <p class="mt-8 text-sm text-white/55">Battery · Charging</p>
+          <p class="text-7xl font-extrabold tracking-tight sm:text-8xl"><span data-count="71">71</span>%</p>
+          <div class="mt-5 h-2 rounded-full bg-white/10"><div class="h-2 w-[71%] rounded-full bg-gradient-to-r from-lime-400 to-emerald-500"></div></div>
+          <p class="mt-4 text-white/65">14 min until full · 97% battery health</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Control / open source -->
+  <section id="control" class="px-5 py-32 text-center">
+    <div class="reveal mx-auto max-w-3xl">
+      <div class="relative mx-auto w-fit"><div class="absolute left-1/2 top-1/2 h-64 w-64 -translate-x-1/2 -translate-y-1/2 rounded-full bg-emerald-500/25 blur-3xl" aria-hidden="true"></div><img data-float data-speed=".06" src="assets/Icons/Security.png" alt="" class="relative block h-40 w-40 object-contain sm:h-52 sm:w-52"></div>
+      <h2 class="mt-8 text-5xl font-extrabold tracking-tight sm:text-7xl">You decide what goes.</h2>
+      <p class="mx-auto mt-6 max-w-xl text-lg text-white/65">Nothing is deleted until you review it. Flusher is built on WinUI 3 so it feels like Windows 11, and the code is open under the MIT license.</p>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section id="download" class="px-5 py-24">
+    <div class="reveal mx-auto max-w-5xl overflow-hidden rounded-[36px] border border-white/10 px-6 py-24 text-center" style="background:linear-gradient(180deg,rgba(0,0,0,.1),rgba(0,0,0,.7)),url('assets/hero-background.jpg') center/cover">
+      <img src="assets/app-logo.png" alt="" class="mx-auto h-20 w-20 rounded-full shadow-[0_10px_40px_rgba(0,0,0,.5)]">
+      <h2 class="mt-8 text-5xl font-extrabold tracking-tight sm:text-7xl">Give your PC room to breathe.</h2>
+      <p class="mt-5 text-lg text-white/75">Free for Windows. No account needed.</p>
+      <div class="mt-9 flex flex-wrap items-center justify-center gap-4 text-sm font-semibold">
+        <a href="https://github.com/GylaxDev/Flusher" target="_blank" rel="noopener" class="rounded-full bg-white px-7 py-3.5 text-black hover:bg-white/85">Download for Windows</a>
+        <a href="https://github.com/GylaxDev/Flusher" target="_blank" rel="noopener" class="rounded-full bg-black/40 px-7 py-3.5 backdrop-blur hover:bg-black/60">View on GitHub</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="border-t border-white/10 px-5 py-8 text-center text-xs text-white/45">Flusher © 2026. Released under the MIT license. Built on WinUI 3. <a href="https://github.com/GylaxDev/Flusher" target="_blank" rel="noopener" class="underline hover:text-white">GitHub</a></footer>
+</body>
+</html>
