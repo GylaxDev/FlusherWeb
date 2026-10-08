@@ -44,7 +44,6 @@ addEventListener('DOMContentLoaded', () => {
 
   const stage = document.querySelector('[data-stage]');
   const wordsStage = document.querySelector('[data-words-stage]');
-  const floats = [...document.querySelectorAll('[data-float]')];
   const progress = el => {
     const r = el.getBoundingClientRect();
     return Math.min(1, Math.max(0, -r.top / (r.height - innerHeight)));
@@ -55,11 +54,6 @@ addEventListener('DOMContentLoaded', () => {
     stage.style.setProperty('--p', progress(stage).toFixed(4));
     const wp = progress(wordsStage) * 1.15;
     words.forEach((w, i) => w.classList.toggle('on', wp > i / words.length));
-    floats.forEach(el => {
-      const r = el.getBoundingClientRect();
-      const d = r.top + r.height / 2 - innerHeight / 2;
-      el.style.transform = `translateY(${(-d * el.dataset.speed).toFixed(1)}px)`;
-    });
   }
   if (reduce) words.forEach(w => w.classList.add('on'));
   addEventListener('scroll', () => requestAnimationFrame(tick), { passive: true });
