@@ -34,15 +34,22 @@
     <div class="sticky top-0 h-screen overflow-hidden">
       <div class="hero-bg absolute inset-x-0 top-0 h-[88vh]" aria-hidden="true"></div>
       <div class="stage-light absolute inset-0" aria-hidden="true"></div>
-      <div class="stage-text relative px-5 pt-24 text-center sm:pt-28">
-        <div class="mx-auto flex w-fit items-center gap-3">
+      <div class="pointer-events-none absolute inset-0 hidden lg:block" aria-hidden="true">
+        <img class="fi" src="assets/Icons/cleaner.png" alt="" style="left:9%;top:33%;--s:96px;--dy:-300px;--r:-14deg;--d:1.1s;--b:0px">
+        <img class="fi" src="assets/Icons/registry.png" alt="" style="left:17%;top:44%;--s:74px;--dy:-230px;--r:10deg;--d:1.25s;--b:0px">
+        <img class="fi" src="assets/Icons/Startup.png" alt="" style="left:3%;top:50%;--s:58px;--dy:-170px;--r:-8deg;--d:1.4s;--b:2px">
+        <img class="fi" src="assets/Icons/files.png" alt="" style="right:9%;top:32%;--s:96px;--dy:-290px;--r:12deg;--d:1.15s;--b:0px">
+        <img class="fi" src="assets/Icons/Duplicate.png" alt="" style="right:17%;top:44%;--s:74px;--dy:-220px;--r:-10deg;--d:1.3s;--b:0px">
+        <img class="fi" src="assets/Icons/Tracks.png" alt="" style="right:3%;top:51%;--s:58px;--dy:-160px;--r:8deg;--d:1.45s;--b:2px">
+      </div>
+      <div class="stage-text relative px-5 pt-20 text-center sm:pt-24">
+        <div class="intro mx-auto flex w-fit items-center gap-3" style="--d:.1s">
           <img src="assets/app-logo.png" alt="" class="h-11 w-11 rounded-full">
           <span class="text-2xl font-semibold tracking-tight">Flusher</span>
         </div>
-        <h1 class="mx-auto mt-5 text-[clamp(2.4rem,6.4vw,5.6rem)] font-bold leading-[1.02] tracking-[-0.045em]">A cleaner PC in one scan.</h1>
-        <p class="mx-auto mt-5 max-w-lg text-lg text-white/80 sm:text-xl">Clean apps, junk and fix your PC problems.</p>
-        <p class="mx-auto mt-5 max-w-lg text-lg text-white/80 sm:text-xl">Free and Private.</p>
-        <div class="mt-8 flex flex-wrap items-center justify-center gap-x-8 gap-y-4">
+        <h1 data-intro class="mx-auto mt-4 text-[clamp(2.4rem,6.4vw,5.6rem)] font-bold leading-[1.02] tracking-[-0.045em]">A cleaner PC in one scan.</h1>
+        <p class="intro mx-auto mt-6 max-w-xl text-lg text-white/80 sm:text-xl" style="--d:.95s">Clean apps, junk and fix your PC problems. <span class="text-white">Free and Private.</span></p>
+        <div class="intro mt-8 flex flex-wrap items-center justify-center gap-x-8 gap-y-4" style="--d:1.2s">
           <a href="#download" class="btn-primary group inline-flex items-center gap-3 rounded-full bg-white py-3.5 pl-6 pr-7 text-[15px] font-semibold text-black">
             <svg viewBox="0 0 24 24" class="h-[18px] w-[18px] fill-current" aria-hidden="true"><path d="M3 3h8.4v8.4H3zM12.6 3H21v8.4h-8.4zM3 12.6h8.4V21H3zM12.6 12.6H21V21h-8.4z"/></svg>
             Download for Windows
@@ -50,7 +57,7 @@
           <a href="#tools" class="text-[15px] font-medium text-white/90 hover:text-white">Explore tools <span aria-hidden="true">›</span></a>
         </div>
       </div>
-      <div class="absolute inset-x-0 top-[max(54vh,28rem)] flex justify-center px-3 [perspective:1800px]">
+      <div class="shot-in absolute inset-x-0 top-[max(54vh,28rem)] flex justify-center px-3 [perspective:1800px]">
         <div class="stage-shot w-[min(94vw,1120px,calc((100vh_-_6.5rem)*1.737))]">
           <img src="assets/mockup.webp" width="2000" height="1151" alt="Flusher home screen with Quick Scan, disk usage and battery status" class="block w-full" style="filter:drop-shadow(0 0 .5px rgba(255,255,255,.3)) drop-shadow(0 50px 90px rgba(0,0,0,.85))">
         </div>
@@ -74,13 +81,13 @@
         <button data-next aria-label="Next" class="h-11 w-11 rounded-full bg-white/10 hover:bg-white/20">›</button>
       </div>
     </div>
-    <div data-cards class="noscroll mt-8 flex snap-x snap-mandatory gap-5 overflow-x-auto rail pb-8 pt-4"></div>
+    <div data-cards class="noscroll mt-8 flex gap-5 overflow-x-auto rail pb-8 pt-4"></div>
   </section>
 
   <!-- Quick scan -->
   <section id="scan" class="px-5 py-32 text-center">
     <div class="reveal mx-auto max-w-3xl">
-      <div class="relative mx-auto w-fit"><div class="absolute left-1/2 top-1/2 h-64 w-64 -translate-x-1/2 -translate-y-1/2 rounded-full bg-sky-500/30 blur-3xl" aria-hidden="true"></div><img data-float data-speed=".06" src="assets/Icons/home.png" alt="" class="relative block h-44 w-44 object-contain sm:h-56 sm:w-56"></div>
+      <div class="relative mx-auto w-fit"><div class="absolute left-1/2 top-1/2 h-64 w-64 -translate-x-1/2 -translate-y-1/2 rounded-full bg-sky-500/30 blur-3xl" aria-hidden="true"></div><img data-float data-speed="0.12" src="assets/Icons/home.png" alt="" class="relative block h-44 w-44 object-contain sm:h-56 sm:w-56"></div>
       <h2 class="mt-8 text-5xl font-extrabold tracking-tight sm:text-7xl">One scan.<br>Everything checked.</h2>
       <p class="mx-auto mt-6 max-w-xl text-lg text-white/65">Quick Scan looks through the places Windows clutter hides. Pick what to include, then press Scan for Issues.</p>
       <div class="mt-9 flex flex-wrap justify-center gap-2.5 text-sm">
@@ -96,14 +103,14 @@
       <p class="reveal mt-5 max-w-xl text-lg text-white/65">Your drive or battery, right on the Home screen.</p>
       <div class="mt-14 grid gap-5 md:grid-cols-2">
         <div class="reveal overflow-hidden card rounded-[32px] p-9">
-          <img data-float data-speed=".04" src="assets/Icons/files.png" alt="" class="h-20 w-20 object-contain">
+          <img data-float data-speed="0.08" src="assets/Icons/files.png" alt="" class="h-20 w-20 object-contain">
           <p class="mt-8 text-sm text-white/55">System Drive (C:)</p>
           <p class="text-7xl font-extrabold tracking-tight sm:text-8xl"><span data-count="88">88</span>%</p>
           <div class="mt-5 h-2 rounded-full bg-white/10"><div class="h-2 w-[88%] rounded-full bg-gradient-to-r from-orange-400 to-rose-500"></div></div>
           <p class="mt-4 text-white/65">27,71 GB free of 237,62 GB</p>
         </div>
         <div class="reveal overflow-hidden card rounded-[32px] p-9">
-          <img data-float data-speed=".04" src="assets/Icons/Battery.png" alt="" class="h-20 w-20 object-contain">
+          <img data-float data-speed="0.08" src="assets/Icons/Battery.png" alt="" class="h-20 w-20 object-contain">
           <p class="mt-8 text-sm text-white/55">Battery · Charging</p>
           <p class="text-7xl font-extrabold tracking-tight sm:text-8xl"><span data-count="71">71</span>%</p>
           <div class="mt-5 h-2 rounded-full bg-white/10"><div class="h-2 w-[71%] rounded-full bg-gradient-to-r from-lime-400 to-emerald-500"></div></div>
@@ -116,7 +123,7 @@
   <!-- Control -->
   <section id="control" class="px-5 py-32 text-center">
     <div class="reveal mx-auto max-w-3xl">
-      <div class="relative mx-auto w-fit"><div class="absolute left-1/2 top-1/2 h-64 w-64 -translate-x-1/2 -translate-y-1/2 rounded-full bg-emerald-500/25 blur-3xl" aria-hidden="true"></div><img data-float data-speed=".06" src="assets/Icons/Security.png" alt="" class="relative block h-40 w-40 object-contain sm:h-52 sm:w-52"></div>
+      <div class="relative mx-auto w-fit"><div class="absolute left-1/2 top-1/2 h-64 w-64 -translate-x-1/2 -translate-y-1/2 rounded-full bg-emerald-500/25 blur-3xl" aria-hidden="true"></div><img data-float data-speed="0.12" src="assets/Icons/Security.png" alt="" class="relative block h-40 w-40 object-contain sm:h-52 sm:w-52"></div>
       <h2 class="mt-8 text-5xl font-extrabold tracking-tight sm:text-7xl">You decide what goes.</h2>
       <p class="mx-auto mt-6 max-w-xl text-lg text-white/65">Nothing is deleted until you review it. Flusher is built on WinUI 3 so it feels like a native Windows experience, and the code is open under the MIT license.</p>
     </div>
