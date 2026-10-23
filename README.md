@@ -1,54 +1,51 @@
-# FlusherWeb
+# Flusher
 
-A modern, animated landing page for Flusher - a PC cleaning and optimization tool. Built with Tailwind CSS and vanilla JavaScript with smooth scroll animations.
+A modern, Windows system cleaning and optimization tool built with WinUI 3. Flusher helps you safely clean junk files, fix registry issues, manage startup programs, and optimize system performance.
 
 ## Features
 
-- **Animated Hero Section** - Engaging scroll-based animations
-- **Modern UI Design** - Clean, dark theme with glassmorphism effects
-- **Responsive Layout** - Optimized for desktop and mobile devices
-- **Smooth Scrolling** - Seamless navigation experience
-- **Interactive Elements** - Dynamic animations and transitions
+### Core Cleaning
+- **Junk File Cleaner** - Scan and remove temporary files, cache, and unnecessary system junk
+- **Registry Cleaner** - Detect and fix invalid registry entries safely
+- **Privacy Traces Cleaner** - Clear browser history, cookies, and privacy traces
+- **Disk Space Analyzer** - Visualize disk usage to identify large files and folders
 
-## Demo
+### System Optimization
+- **Startup Manager** - View and manage programs that launch at Windows startup
+- **RAM Cache Optimizer** - Free up memory and optimize RAM usage
+- **Disk Repair** - Check and repair disk errors
+- **System Health Monitoring** - Real-time system performance insights
 
-[View Live Demo](#) *(Update with your deployment URL)*
+### Additional Tools
+- **Shortcut Fixer** - Repair broken shortcuts across your system
+- **Settings & Customization** - Configure cleaning preferences and app behavior
 
 ## Tech Stack
 
+- **Framework:** WinUI 3 (Windows App SDK)
+- **Language:** C# (.NET 8)
+- **UI:** XAML with custom Fluent Design styling
+- **Platform:** Windows 10/11 (x86, x64, ARM64)
+
+## Website
+
+This repository contains the landing page for Flusher. Built with:
 - HTML5
-- Tailwind CSS (via CDN)
+- Tailwind CSS
 - Vanilla JavaScript
-- CSS3 Animations
+- Custom animations
 
-## Getting Started
+[View Landing Page](https://github.com/GylaxDev/FlusherWeb)
 
-1. Clone the repository:
-```bash
-git clone https://github.com/GylaxDev/FlusherWeb.git
-cd FlusherWeb
-```
+## Download
 
-2. Open `index.html` in your browser, or serve it with a local server:
-```bash
-# Using Python
-python -m http.server 8000
+*Coming soon* - Check the releases page for the latest version.
 
-# Using Node.js
-npx serve .
-```
+## Requirements
 
-## Project Structure
-
-```
-FlusherWeb/
-├── assets/         # Images and icons
-├── index.html      # Main HTML file
-├── script.js       # JavaScript for animations
-├── styles.css      # Custom styles
-├── vercel.json     # Vercel deployment config
-└── LICENSE         # License information
-```
+- Windows 10 version 17763.0 or higher
+- Windows 11 recommended
+- Administrator privileges may be required for some cleaning features
 
 ## License
 
